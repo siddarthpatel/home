@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+:root {
+  font-family: "Inter", "Times New Roman", Times, serif, sans-serif;
+  --home-fonts-default: var(--font-family);
+  --home-fonts-mono: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  --scrollbarWidth: 0px;
+  --lvw: calc(1lvw - var(--scrollbarWidth) / 100);
+  --full-width: calc(var(--lvw) * 100);
+  --tw-bg-opacity: 1;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter", sans-serif;
+    --home-fonts-default: var(--font-family);
+    --home-fonts-mono: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    --scrollbarWidth: 0px;
+    --lvw: calc(1lvw - var(--scrollbarWidth) / 100);
+    --full-width: calc(var(--lvw) * 100);
+    --tw-bg-opacity: 1;
+    --background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    --home-colors-gray1: rgb(115 115 115 / var(--tw-text-opacity));
+  }
+}
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0px;
+  font-family: var(--home-fonts-default);
+  line-height: inherit;
+  color: var(--home-colors-gray1);
+  overflow-x: hidden;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  background-color: var(--background-color);
+}
+
+i {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.after\:content-\[\'_\2197\'\]:after {
+  --tw-content: " \2197";
+  content: var(--tw-content);
+}
+
+#nprogress .bar {
+  background: #000 !important;
+}
+
+blockquote {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #dfe6e9;
+}
