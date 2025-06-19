@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 import Header from "../components/Header";
+import MobileMenuContainer from "../components/MobileMenuContainer";
+
 
 NProgress.configure({ showSpinner: false });
 
@@ -36,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <main className="flex-1 overflow-y-visible">
+      <MobileMenuContainer links={headerLinks} />
       <div className="mx-auto max-w-7xl px-8 py-12">
         <Header links={headerLinks} />
         <div className={containerClasses}>
